@@ -186,7 +186,7 @@ init_mathjax();
 
 
     <!-- Bootstrap -->
-        <link rel="stylesheet" href="/theme/css/bootstrap.yeti.min.css" type="text/css"/>
+        <link rel="stylesheet" href="/theme/css/bootstrap.spacelab.min.css" type="text/css"/>
     <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
 
     <link href="/theme/css/pygments/default.css" rel="stylesheet">
@@ -202,11 +202,23 @@ init_mathjax();
 <div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
             <a href="/" class="navbar-brand">
 Bits 'n' Bots            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
+                         <li><a href="/pages/about-me/">
+                             About Me
+                          </a></li>
+                        <li >
+                            <a href="/category/blog">Blog</a>
+                        </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
             </ul>
@@ -222,6 +234,13 @@ Bits 'n' Bots            </a>
 <div class="container">
     <div class="row">
         <div class="col-sm-9">
+            <article>
+                <h2><a href="/articles/2019/04/20/my-first-blog-post/">Welcome to Bits 'n' Bots!</a></h2>
+                <div class="summary"><p>Introduction to what the bits 'n' bots blog is about</p>
+                    <a class="btn btn-default btn-xs" href="/articles/2019/04/20/my-first-blog-post/">more ...</a>
+                </div>
+            </article>
+            <hr/>
 
         </div>
         <div class="col-sm-3" id="sidebar">
@@ -271,7 +290,7 @@ Bits 'n' Bots            </a>
    <div class="container">
       <hr>
       <div class="row">
-         <div class="col-xs-10">&copy;  Scott Butters
+         <div class="col-xs-10">&copy; 2019 Scott Butters
             &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
             <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
             <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>

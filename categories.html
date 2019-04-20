@@ -186,7 +186,7 @@ init_mathjax();
 
 
     <!-- Bootstrap -->
-        <link rel="stylesheet" href="/theme/css/bootstrap.yeti.min.css" type="text/css"/>
+        <link rel="stylesheet" href="/theme/css/bootstrap.spacelab.min.css" type="text/css"/>
     <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
 
     <link href="/theme/css/pygments/default.css" rel="stylesheet">
@@ -202,11 +202,23 @@ init_mathjax();
 <div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
             <a href="/" class="navbar-brand">
 Bits 'n' Bots            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
+                         <li><a href="/pages/about-me/">
+                             About Me
+                          </a></li>
+                        <li >
+                            <a href="/category/blog">Blog</a>
+                        </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
             </ul>
@@ -225,6 +237,18 @@ Bits 'n' Bots            </a>
     <section id="categories">
       <h1>All Categories for Bits 'n' Bots</h1>
         <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse-blog">blog <span class="badge pull-right">1</span></a>
+                    </h4>
+                </div>
+                <div id="collapse-blog" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p><span class="categories-timestamp"><time datetime="2019-04-20T12:38:00-07:00">Sat 20 April 2019</time></span> <a href="/articles/2019/04/20/my-first-blog-post/">Welcome to Bits 'n' Bots!</a></p>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </section>
@@ -276,7 +300,7 @@ Bits 'n' Bots            </a>
    <div class="container">
       <hr>
       <div class="row">
-         <div class="col-xs-10">&copy;  Scott Butters
+         <div class="col-xs-10">&copy; 2019 Scott Butters
             &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
             <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
             <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
