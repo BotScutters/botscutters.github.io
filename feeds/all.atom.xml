@@ -160,6 +160,19 @@
 &lt;/figure&gt;
 
 &lt;p&gt;At this point I could only loosely argue that my model was performing better than if had simply predicted the mean dispensary revenue every time. Plenty of room to improve!&lt;/p&gt;
+&lt;h3&gt;Feature Engineering&lt;/h3&gt;
+&lt;p&gt;Oh, where to start...&lt;/p&gt;
+&lt;p&gt;One of the primary modes of feature engineering that I focused on in attempting to improve my model was feature transformations. These are cases where I could tell by looking at a plot of a feature vs the target variable that there was in fact a relationship there, but that it wasn't simply linear.&lt;/p&gt;
+&lt;figure align="middle"&gt;
+  &lt;img src="/img/rel_plots.png" alt="rel-plots" style="width:100%"&gt;
+  &lt;figcaption&gt;Scatterplots showing selected features relative to both log- and non-log-transformed target variable.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure align="middle"&gt;
+  &lt;img src="/img/log_transforms.png" alt="log-transforms" style="width:100%"&gt;
+  &lt;figcaption&gt;Scatterplots showing selected log-transformed features relative to both log- and non-log-transformed target variable.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
 &lt;h3&gt;Optimizing our model and feature selection with feature scaling and regularization through lasso regression&lt;/h3&gt;
 &lt;p&gt;This is the point where I entered the iterative phase, which basically meant living in a feedback loop bouncing back and forth between model experimentation and feature engineering—until it didn't seem like I was going to get performance much better within the time constraints at hand. &lt;/p&gt;
 &lt;p&gt;To do this, I wrote a pipeline function to perform the following steps:&lt;/p&gt;
@@ -270,6 +283,7 @@
 &lt;/figure&gt;
 
 &lt;h2&gt;So What Insights Can We Glean?&lt;/h2&gt;
+&lt;p&gt;misc, number_of_reviews, population_in_group_qrtrs, population_density&lt;/p&gt;
 &lt;h3&gt;Descaling and translating our coefficients into terms we can understand&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
