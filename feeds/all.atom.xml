@@ -120,14 +120,25 @@
 &lt;h2&gt;Cleaning, Combining, and Developing the Data&lt;/h2&gt;
 &lt;h3&gt;Merging data without a common key&lt;/h3&gt;
 &lt;h3&gt;Determining dispensary density&lt;/h3&gt;
-&lt;h2&gt;Explore, Engineer, and Iterate&lt;/h2&gt;
+&lt;h2&gt;Exploration and Feature Engineering&lt;/h2&gt;
 &lt;h3&gt;Heatmap of correlations&lt;/h3&gt;
 &lt;figure align="middle"&gt;
   &lt;img src="/img/heatmap.png" alt="heatmap" style="width:100%"&gt;
   &lt;figcaption&gt;Correlation map of a selection of features and the target variable&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;h3&gt;Regression plots of each feature with target variable&lt;/h3&gt;
+&lt;h3&gt;Univariate regression plots of each feature with target variable&lt;/h3&gt;
+&lt;p&gt;One of the primary modes of feature engineering that I focused on in attempting to improve my model was feature transformations. These are cases where I could tell by looking at a plot of a feature vs the target variable that there was in fact a relationship there, but that it wasn't simply linear. &lt;/p&gt;
+&lt;figure align="middle"&gt;
+  &lt;img src="/img/rel_plots.png" alt="rel-plots" style="width:100%"&gt;
+  &lt;figcaption&gt;Scatterplots showing selected features relative to both log- and non-log-transformed target variable.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure align="middle"&gt;
+  &lt;img src="/img/log_transforms.png" alt="log-transforms" style="width:100%"&gt;
+  &lt;figcaption&gt;Scatterplots showing selected log-transformed features relative to both log- and non-log-transformed target variable.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
 &lt;h2&gt;Building and Refining a Model&lt;/h2&gt;
 &lt;h3&gt;Building an MVP (Minimum Viable Product) with multivariate linear regression&lt;/h3&gt;
 &lt;p&gt;Once I had all my data combined and formatted into a &lt;a href="https://en.wikipedia.org/wiki/Design_matrix"&gt;design matrix&lt;/a&gt;, it was time to run my first linear regression and get an idea of my baseline model performance. Mind you, the purpose here is not yet to have a particularly &lt;em&gt;good&lt;/em&gt; model, but simply to have established a simple, functioning pipeline that we can quickly and easily iterate on. &lt;/p&gt;
@@ -160,19 +171,6 @@
 &lt;/figure&gt;
 
 &lt;p&gt;At this point I could only loosely argue that my model was performing better than if had simply predicted the mean dispensary revenue every time. Plenty of room to improve!&lt;/p&gt;
-&lt;h3&gt;Feature Engineering&lt;/h3&gt;
-&lt;p&gt;Oh, where to start...&lt;/p&gt;
-&lt;p&gt;One of the primary modes of feature engineering that I focused on in attempting to improve my model was feature transformations. These are cases where I could tell by looking at a plot of a feature vs the target variable that there was in fact a relationship there, but that it wasn't simply linear.&lt;/p&gt;
-&lt;figure align="middle"&gt;
-  &lt;img src="/img/rel_plots.png" alt="rel-plots" style="width:100%"&gt;
-  &lt;figcaption&gt;Scatterplots showing selected features relative to both log- and non-log-transformed target variable.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;figure align="middle"&gt;
-  &lt;img src="/img/log_transforms.png" alt="log-transforms" style="width:100%"&gt;
-  &lt;figcaption&gt;Scatterplots showing selected log-transformed features relative to both log- and non-log-transformed target variable.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
 &lt;h3&gt;Optimizing our model and feature selection with feature scaling and regularization through lasso regression&lt;/h3&gt;
 &lt;p&gt;This is the point where I entered the iterative phase, which basically meant living in a feedback loop bouncing back and forth between model experimentation and feature engineering—until it didn't seem like I was going to get performance much better within the time constraints at hand. &lt;/p&gt;
 &lt;p&gt;To do this, I wrote a pipeline function to perform the following steps:&lt;/p&gt;
