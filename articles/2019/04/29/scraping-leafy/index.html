@@ -173,7 +173,7 @@ init_mathjax = function() {
 init_mathjax();
 </script>
 
-<link rel="canonical" href="/articles/2019/04/29/scraping-leafy/">
+<link rel="canonical" href="http://scottbutters.com/articles/2019/04/29/scraping-leafy/">
 
         <meta name="author" content="Scott Butters" />
         <meta name="keywords" content="python,data science,web scraping,leafly,marijuana,washington" />
@@ -182,7 +182,7 @@ init_mathjax();
         <meta property="og:site_name" content="Bits 'n' Bots" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="Scraping Leafly.com for Data on the Marijuana Industry"/>
-        <meta property="og:url" content="/articles/2019/04/29/scraping-leafy/"/>
+        <meta property="og:url" content="http://scottbutters.com/articles/2019/04/29/scraping-leafy/"/>
         <meta property="og:description" content="Leafly is an information aggregator for cannabis. They maintain a profile for most of the dispensaries in the state. This makes them a pretty valuable resource for studies on the cannabis industry. Here&#39;s how I scraped Leafly for ratings, reviews, inventory counts, and other metadata on every dispensary in the state of Washington."/>
         <meta property="article:published_time" content="2019-04-29" />
             <meta property="article:section" content="blog" />
@@ -197,16 +197,16 @@ init_mathjax();
 
 
     <!-- Bootstrap -->
-        <link rel="stylesheet" href="/theme/css/bootstrap.spacelab.min.css" type="text/css"/>
-    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="http://scottbutters.com/theme/css/bootstrap.spacelab.min.css" type="text/css"/>
+    <link href="http://scottbutters.com/theme/css/font-awesome.min.css" rel="stylesheet">
 
-    <link href="/theme/css/pygments/default.css" rel="stylesheet">
-    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+    <link href="http://scottbutters.com/theme/css/pygments/default.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://scottbutters.com/theme/css/style.css" type="text/css"/>
 
-        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+        <link href="http://scottbutters.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
               title="Bits 'n' Bots ATOM Feed"/>
 
-        <link href="/feeds/blog.atom.xml" type="application/atom+xml" rel="alternate"
+        <link href="http://scottbutters.com/feeds/blog.atom.xml" type="application/atom+xml" rel="alternate"
               title="Bits 'n' Bots blog ATOM Feed"/>
 </head>
 <body>
@@ -220,16 +220,16 @@ init_mathjax();
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="/" class="navbar-brand">
+            <a href="http://scottbutters.com/" class="navbar-brand">
 Bits 'n' Bots            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                         <li><a href="/pages/about-me/">
+                         <li><a href="http://scottbutters.com/pages/about-me/">
                              About Me
                           </a></li>
                         <li class="active">
-                            <a href="/category/blog">Blog</a>
+                            <a href="http://scottbutters.com/category/blog">Blog</a>
                         </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -250,7 +250,7 @@ Bits 'n' Bots            </a>
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="/articles/2019/04/29/scraping-leafy/"
+                    <a href="http://scottbutters.com/articles/2019/04/29/scraping-leafy/"
                        rel="bookmark"
                        title="Permalink to Scraping Leafly.com for Data on the Marijuana Industry">
                         Scraping Leafly.com for Data on the Marijuana Industry
@@ -272,17 +272,17 @@ Bits 'n' Bots            </a>
     <i title=" ᛫  ~1010 words">~5  min read</i>
     <br>
 <span class="label label-default">Tags</span>
-	<a href="/tag/python">python</a>
+	<a href="http://scottbutters.com/tag/python">python</a>
         /
-	<a href="/tag/data-science">data science</a>
+	<a href="http://scottbutters.com/tag/data-science">data science</a>
         /
-	<a href="/tag/web-scraping">web scraping</a>
+	<a href="http://scottbutters.com/tag/web-scraping">web scraping</a>
         /
-	<a href="/tag/leafly">leafly</a>
+	<a href="http://scottbutters.com/tag/leafly">leafly</a>
         /
-	<a href="/tag/marijuana">marijuana</a>
+	<a href="http://scottbutters.com/tag/marijuana">marijuana</a>
         /
-	<a href="/tag/washington">washington</a>
+	<a href="http://scottbutters.com/tag/washington">washington</a>
     
 
 
@@ -313,7 +313,7 @@ Bits 'n' Bots            </a>
 <h4>Getting a list of all of the dispensaries</h4>
 <p>In a dream world there would be a single page somewhere on Leafly pointing to each of the 500 or so dispensaries in Washington, making it trivial to extract all those links and continue on to get all my data and accomplish great things. This is not that world. Instead, Leafly has this lovely interface of a map view and tiles, dynamically rendered and updated as you move the map or search a new area. Unfortunately, a given map view doesn't actually render all of the dispensaries in that view, nor does the URL interface allow for the map to be easily searched in a programmatic way. Modern javascript allows for some beautiful web design, but it wasn't giving me any handouts here.</p>
 <figure>
-  <img src="/img/leafly-disp-search.png" alt="leafly-disp-search" style="width:100%">
+  <img src="http://scottbutters.com/img/leafly-disp-search.png" alt="leafly-disp-search" style="width:100%">
   <figcaption>Dispensary search page on Leafly.com</figcaption>
 </figure>
 
@@ -324,13 +324,13 @@ Bits 'n' Bots            </a>
 <p>So that was fun, and by the end of the routine I had a data dictionary with entries for a little over 600 dispensaries (my coordinates overlaps into Oregon a bit, and from the looks of it the overachieving stoners down in Portland out-consume Seattle by about 2:1).</p>
 <p>From here, I had a new scraping algorithm to write. To get the data off of each individual dispensary page, I used Selenium to fire up an instance of Chrome to be programmatically driven to each page and select and scrape the needed information. Of course, the first step in the process was to have my robobrowser tell Leafly that it was indeed over 21 years of age.</p>
 <figure align="middle">
-  <img src="/img/are-you-21.png" alt="are-you-21" style="width:60%">
+  <img src="http://scottbutters.com/img/are-you-21.png" alt="are-you-21" style="width:60%">
   <figcaption>Minor defense on Leafly.com</figcaption>
 </figure>
 
 <p>Simple enough, just had to tell the robot to find the Yes button and click it, and…success! My robot successfully thwarted their robot's defense perimeter and we're off to the races. On each page, I pulled every bit of data I could find that might be relevant, from continuous variables like ratings, number of reviews, and quantity of each product found to be in stock to the categorical things like whether or not they had an ATM on site or are ADA accessible.</p>
 <figure>
-  <img src="/img/lux-pot-shop.png" alt="lux-pot-shop" style="width:100%">
+  <img src="http://scottbutters.com/img/lux-pot-shop.png" alt="lux-pot-shop" style="width:100%">
   <figcaption>Dispensary profile page on Leafly.com</figcaption>
 </figure>
 
@@ -352,6 +352,7 @@ Bits 'n' Bots            </a>
                 this.language = "en";
 
                         this.page.identifier = '2019-04-29-scraping-leafy';
+                        this.page.url = 'http://scottbutters.com/articles/2019/04/29/scraping-leafy/';
             };
 
             /* * * DON'T EDIT BELOW THIS LINE * * */
@@ -418,13 +419,13 @@ Bits 'n' Bots            </a>
       </div>
    </div>
 </footer>
-<script src="/theme/js/jquery.min.js"></script>
+<script src="http://scottbutters.com/theme/js/jquery.min.js"></script>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="/theme/js/bootstrap.min.js"></script>
+<script src="http://scottbutters.com/theme/js/bootstrap.min.js"></script>
 
 <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-<script src="/theme/js/respond.min.js"></script>
+<script src="http://scottbutters.com/theme/js/respond.min.js"></script>
 
 
     <!-- Disqus -->
